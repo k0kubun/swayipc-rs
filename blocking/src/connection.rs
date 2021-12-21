@@ -6,7 +6,7 @@ use std::io::Write;
 use std::os::unix::net::UnixStream;
 
 #[derive(Debug)]
-pub struct Connection(UnixStream);
+pub struct Connection(pub UnixStream);
 
 impl Connection {
     pub fn new() -> Fallible<Self> {
